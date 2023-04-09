@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="one.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Suggestion</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-image: url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/93e7fa153289077.Y3JvcCwzODM1LDMwMDAsODUsMA.png);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      max-width: 500px;
+      
+    
+    }
+
+    label {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    select {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #f9f9f9;
+      color: #666;
+      width: 100%;
+      margin-bottom: 20px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+    }
+
+    input[type="submit"] {
+      background-color: #af4c4c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #b54141;
+    }
+
+    #suggestion1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #7463df;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="input-form">
+    <label for="rating-input">What is your preferred rating?</label>
+    <select id="rating-input" name="rating-input" required>
+      <option value="">Select your preferred rating</option>
+      <option value="1-5">1-5</option>
+      <option value="5-6">5-6</option>
+      <option value="6-7">6-7</option>
+      <option value="7-8">7-8</option>
+      <option value="8-9">8-9</option>
+      <option value="9-10">9-10</option>
+    </select>
+    <input type="submit" value="Submit">
+ 
+
+    </form>
+    
+    <div id="suggestion1"></div>
+    
+    <script>
+      function movieselector(){
+        
+      }
+        const form = document.getElementById('input-form');
+        const suggestion1Div = document.getElementById('suggestion1');
+    
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+     
+            const genreInputValue = document.getElementById('rating-input').value;
+    
+            
+            let suggestion1;
+            switch (genreInputValue) {
+                case '1-5':
+                    suggestion1 = 'You might enjoy(really?) watching "Disaster Movie".';
+                    break;
+                case '5-6':
+                    suggestion1 = 'You might enjoy watching " The 5th Quarter".';
+                    break;
+                case '6-7':
+                    suggestion1 = 'You might enjoy watching "The 13th Warrior ".';
+                    break;
+                case '7-8':
+                    suggestion1 = 'You might enjoy watching "The Express ".';
+                    break;
+                case '8-9':
+                    suggestion1 = 'You might enjoy watching "Forest Gump".';
+                    break;
+                  case '9-10':
+                    suggestion1='You might enjoy watching "The Godfather".';
+                default:
+                suggestion = 'Please select a  rating to get a movie suggestion.';
+                
+    
+    
+            }
+    
+            
+            suggestion1Div.textContent = suggestion1;
+        });
+    </script>
+   <button class="next"> <a href="http://127.0.0.1:5500/form3.html" >NEXT</a> </button>
+    
+ </body>
+ </html>

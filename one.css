@@ -1,0 +1,84 @@
+nav {
+    background-color: #000000;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #000000;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #000000;
+    
+  } 
+  
+  nav a:hover {
+    background-color: burlywood;
+    color: #333;
+    border-radius: 20px;
+    padding-top: 50px;
+
+  }
+  .tagline{
+    color: #ddd;
+    background-color: black;
+    
+  }
+  body{
+    background-color: #000000;
+  }
+  .image{
+    position:absolute;
+    top:20;
+    right:0;
+    height: 50px;
+    width: 65px;
+  }
+  .video-container{
+    background-color: #000000;
+  }
+  
+  .slide-imageone{
+    display: inline-block;
+    text-align: center;
+    height:140px;
+    width: 110px;
+  margin: 10px;
+  }
+  .watchlist{
+    padding-left: 120px;
+  }
+  .slide-imagetwo{
+    display: inline-block;
+    text-align: center;
+    height:140px;
+    width: 110px;
+  margin: 10px;
+  }
+  img {
+    
+    transition: transform 0.5s ease; /* add a transition effect to the transform property */
+  }
+  
+  img:hover {
+    transform: scale(1.2); /* scale the image up by 10% on hover */
+  }
+  
+  .next{
+   float: right;
+   color: brown;
+  }
+  

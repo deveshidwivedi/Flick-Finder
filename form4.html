@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="one.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+         
+		body {
+		  background-color: #f5f5f5;
+		  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		  background-image: url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/78c9fc157193015.Y3JvcCwyNTU2LDIwMDAsMjIxLDA.jpg);
+		}
+		
+		form {
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  background-color: #fff;
+		  padding: 40px;
+		  border-radius: 8px;
+		  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		  margin: 20px auto;
+		  max-width: 500px;
+		}
+		
+		label {
+		  font-size: 20px;
+		  font-weight: bold;
+		  margin-bottom: 10px;
+		  color: #666;
+		}
+		
+		select {
+		  padding: 10px;
+		  border: 2px solid #ccc;
+		  border-radius: 6px;
+		  font-size: 16px;
+		  font-weight: bold;
+		  background-color: #f9f9f9;
+		  color: #666;
+		  width: 100%;
+		  margin-bottom: 20px;
+		  appearance: none;
+		  -webkit-appearance: none;
+		  -moz-appearance: none;
+		  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
+		  background-repeat: no-repeat;
+		  background-position: right 12px center;
+		}
+		
+		input[type="submit"] {
+		  background-color: #af4c4c;
+		  color: white;
+		  border: none;
+		  border-radius: 5px;
+		  cursor: pointer;
+		  font-size: 16px;
+		  font-weight: bold;
+		  padding: 10px 20px;
+		  transition: background-color 0.2s ease-in-out;
+		}
+		
+		input[type="submit"]:hover {
+		  background-color: #b54141;
+		}
+		
+		#suggestion3 {
+		  font-size: 24px;
+		  font-weight: bold;
+		  color: #ffffff;
+		  margin-top: 20px;
+		  text-align: center;
+		}
+	  	 
+			</style>
+		
+	<form id="input-form">
+		<label for="Era">What is your favorite movie Era?</label>
+		<select id="Era" name="Era" required>
+			<option value="">Select an Era</option>
+			<option value="The 70s">The 70s</option>
+			<option value="The 80s">The 80s</option>
+			<option value="The 90s">The 90s</option>
+			<option value="The 2000s">The 2000s</option>
+			<option value="The 2010s">The 2010s</option>
+			<option value="The 2020s">The 2020s</option>
+		</select>
+		<input type="submit" value="Submit">
+	</form>
+
+	<div id="suggestion3"></div>
+
+	<script>
+		const form = document.getElementById('input-form');
+		const suggestion3Div = document.getElementById('suggestion3');
+
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();  
+
+		 
+			const genreInputValue = document.getElementById('Era').value;
+
+			 
+			let suggestion3;
+			switch (genreInputValue) {
+				case 'The 70s':
+					suggestion3 = 'You might enjoy watching "Sholay".';
+					break;
+				case 'The 80s':
+					suggestion3 = 'You might enjoy watching "Mr. India".';
+					break;
+				case 'The 90s':
+					suggestion3 = 'You might enjoy watching "DDLJ".';
+					break;
+				case 'The 2000s':
+					suggestion3 = 'You might enjoy watching "Lagaan".';
+					break;
+				case 'The 2010s':
+					suggestion3 = 'You might enjoy watching "BARFI!".';
+					break;
+				case 'The 2020s':
+					suggestion3 = 'You might enjoy watching "Pathaan".';
+					break;
+				default:
+					suggestion3 = 'Please select an era to get a movie suggestion.';
+			}
+
+ 
+			suggestion3Div.textContent = suggestion3;
+		});
+	</script>
+	<button class= "next">
+    <a href="  " >DONE</a></button>
+</body>
+</html>
