@@ -59,3 +59,8 @@ img{
 img:hover{
     transform: translateZ(20px);
 }
+
+a:visited {
+    color: white;
+}
+
